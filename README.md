@@ -14,3 +14,7 @@ In the `script/` directory you can find the `split.sh` helper script. Use it to 
 
 Finally run `./calculate_freq.py input/` to analyze all files and `./combine_freq.py input/` to combine everything and generate the output. You can find an HTML table of the 10000 most common Chinese characters of the corpus in the file `output/frequencies.html`.
 
+### Precomputed frequencies
+
+Go to https://czielinski.github.io/hanzifreq/script/output/frequencies.html to see the calculated character frequencies for the Chinese Wikipedia corpus.
+
