@@ -8,11 +8,11 @@ One good and large language corpus is the Chinese Wikipedia, which you can downl
 
 ### Split large input files into smaller ones
 
-In the `script/` directory you can find the `split.sh` helper script. Use it to split a large input file into smaller ones, which can be analyzed in parallel. Run it via `./split.sh zhwiki-latest-pages-articles.xml`. You will find the smaller input files in the `input/` directory.
+In the `hanzifreq/` directory you can find the `split.sh` helper script. Use it to split a large input file into smaller ones, which can be analyzed in parallel. Run it via `./split.sh zhwiki-latest-pages-articles.xml`. You will find the smaller input files in the `input/` directory.
 
 ### Analyzing and combining
 
-Finally run `./calculate_freq.py input/` to analyze all files and `./combine_freq.py input/` to combine everything and generate the output. You can find an HTML table of the 10000 most common Chinese characters of the corpus in the file `output/frequencies.html`.
+Then run `./calculate_freq.py input/` to analyze all files and `./combine_freq.py input/` to combine everything and generate the output. You can find an HTML table of the 10000 most common Chinese characters of the corpus in the file `output/frequencies.html`.
 
 ### Precomputed frequencies
 
