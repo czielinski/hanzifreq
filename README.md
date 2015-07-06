@@ -18,5 +18,5 @@ Then run `./calculate_freq.py input/` to analyze all files and `./combine_freq.p
 
 ### Precomputed frequencies
 
-Go to `https://czielinski.github.io/hanzifreq/hanzifreq/output/frequencies.html` to see the calculated character frequencies for the Chinese Wikipedia corpus.
+Go to `http://git.io/hanzifreq` to see the calculated character frequencies for the Chinese Wikipedia corpus.
 
