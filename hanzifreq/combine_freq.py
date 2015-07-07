@@ -78,9 +78,7 @@ def main():
         
         chars_count.update(new_count)
 
-    output_file = "output/frequencies.html"
-    write_table(chars_count, output_file)
-
+    write_table(chars_count, config.output_file)
     print("Done.")
 
 

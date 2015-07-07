@@ -23,14 +23,17 @@
 import sys
 import re
 
+# Output file
+output_file = "output/frequencies.html"
+
 # File ending for frequency information
-freq_file = '.freq'
+freq_file = ".freq"
 
 # Number of characters to output
 num_output_chars = 10000
 
 # HTML template file
-template_file = 'template/template.html'
+template_file = "template/template.html"
 
 # Definition of Chinese characters
 hanzi = '\u3007\u4E00-\u9FFF\u3400-\u4DBF\uF900-\uFAFF'
