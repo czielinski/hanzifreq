@@ -30,7 +30,7 @@ import os
 import config
 
 
-def write_table(chars_count, output_file):
+def export_frequencies(chars_count, output_file):
     """
     Writes a frequency distribution to a HTML file.
     """
@@ -38,13 +38,18 @@ def write_table(chars_count, output_file):
         template = f.read()
 
     chars_total = sum(chars_count.values())
-    table = ""
+    cum_freq = 0.0
     
+    table = ""
     full_freq_data = enumerate(chars_count.most_common(config.num_output_chars), start=1)
     for rank, char_data in full_freq_data:
         char, count = char_data
-        data = (rank, char, 100.0 * count / chars_total)
-        table += "<tr><td>{}</td><td>{}</td><td>{:.8f}</td></tr>\n".format(*data)
+
+        freq = 100.0 * count / chars_total
+        cum_freq += freq
+
+        data = (rank, char, freq, cum_freq)
+        table += "<tr><td>{}</td><td>{}</td><td>{:.5f}</td><td>{:.5f}</td></tr>\n".format(*data)
 
     content = template.format(table=table)
 
@@ -78,7 +83,7 @@ def main():
         
         chars_count.update(new_count)
 
-    write_table(chars_count, config.output_file)
+    export_frequencies(chars_count, config.output_file)
     print("Done.")
 
 
